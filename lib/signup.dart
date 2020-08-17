@@ -6,6 +6,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  var roles = ["Teacher", "Student"];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

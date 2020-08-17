@@ -122,10 +122,18 @@ class IndexState extends State<IndexPage> {
                         color: Colors.white,
                         textColor: Colors.black,
                       ),
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Kindly contact your administrator for an ID if you are joining as an attendee.",
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 14, fontFamily: 'Poppins'),
+                ),
+              ),
             ],
           ),
         ),
