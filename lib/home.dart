@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'signup.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -119,7 +120,10 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   onTap: () {
-                    null;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUp()),
+                    );
                   },
                 ),
               ],
