@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
+import 'agora/main.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -103,7 +104,10 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     onPressed: () {
-                      null;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MyApp()),
+                      );
                     },
                   ),
                 ),
