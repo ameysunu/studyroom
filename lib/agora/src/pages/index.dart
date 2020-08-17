@@ -116,7 +116,7 @@ class IndexState extends State<IndexPage> {
                       child: RaisedButton(
                         onPressed: onJoin,
                         child: Text(
-                          'Join',
+                          'Let\'s go!',
                           style: TextStyle(fontFamily: 'Poppins'),
                         ),
                         color: Colors.white,
