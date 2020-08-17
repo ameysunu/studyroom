@@ -60,9 +60,8 @@ class IndexState extends State<IndexPage> {
                       hintStyle:
                           TextStyle(color: Colors.white, fontFamily: 'Poppins'),
                       errorStyle:
-                          TextStyle(color: Colors.white, fontFamily: 'Poppins'),
-                      errorText:
-                          _validateError ? 'Channel name is mandatory' : null,
+                          TextStyle(color: Colors.red, fontFamily: 'Poppins'),
+                      errorText: _validateError ? 'ID is mandatory' : null,
                       border: UnderlineInputBorder(
                         borderSide: BorderSide(width: 1),
                       ),
