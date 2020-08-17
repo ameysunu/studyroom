@@ -30,8 +30,16 @@ class IndexState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Agora Flutter QuickStart'),
+        backgroundColor: Colors.black,
+        title: Text(
+          'StudyRoom',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Poppins',
+          ),
+        ),
       ),
       body: Center(
         child: Container(
@@ -43,14 +51,22 @@ class IndexState extends State<IndexPage> {
                 children: <Widget>[
                   Expanded(
                       child: TextField(
+                    style:
+                        TextStyle(color: Colors.white, fontFamily: 'Poppins'),
                     controller: _channelController,
                     decoration: InputDecoration(
+                      labelStyle:
+                          TextStyle(color: Colors.white, fontFamily: 'Poppins'),
+                      hintStyle:
+                          TextStyle(color: Colors.white, fontFamily: 'Poppins'),
+                      errorStyle:
+                          TextStyle(color: Colors.white, fontFamily: 'Poppins'),
                       errorText:
                           _validateError ? 'Channel name is mandatory' : null,
                       border: UnderlineInputBorder(
                         borderSide: BorderSide(width: 1),
                       ),
-                      hintText: 'Channel name',
+                      hintText: 'Enter ID',
                     ),
                   ))
                 ],
@@ -58,7 +74,12 @@ class IndexState extends State<IndexPage> {
               Column(
                 children: [
                   ListTile(
-                    title: Text(ClientRole.Broadcaster.toString()),
+                    //title: Text(ClientRole.Broadcaster.toString()),
+                    title: Text(
+                      "Start Presenting",
+                      style:
+                          TextStyle(fontFamily: 'Poppins', color: Colors.white),
+                    ),
                     leading: Radio(
                       value: ClientRole.Broadcaster,
                       groupValue: _role,
@@ -70,7 +91,12 @@ class IndexState extends State<IndexPage> {
                     ),
                   ),
                   ListTile(
-                    title: Text(ClientRole.Audience.toString()),
+                    // title: Text(ClientRole.Audience.toString()),
+                    title: Text(
+                      "Join a meeting",
+                      style:
+                          TextStyle(fontFamily: 'Poppins', color: Colors.white),
+                    ),
                     leading: Radio(
                       value: ClientRole.Audience,
                       groupValue: _role,
@@ -90,9 +116,12 @@ class IndexState extends State<IndexPage> {
                     Expanded(
                       child: RaisedButton(
                         onPressed: onJoin,
-                        child: Text('Join'),
-                        color: Colors.blueAccent,
-                        textColor: Colors.white,
+                        child: Text(
+                          'Join',
+                          style: TextStyle(fontFamily: 'Poppins'),
+                        ),
+                        color: Colors.white,
+                        textColor: Colors.black,
                       ),
                     )
                   ],
