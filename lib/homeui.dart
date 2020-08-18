@@ -9,6 +9,10 @@ class HomeUI extends StatefulWidget {
 class _HomeUIState extends State<HomeUI> {
   @override
   String meeting = "No ongoing meetings!";
+  bool isSelected = false;
+  bool isSelected1 = false;
+  bool isSelected2 = false;
+
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -100,19 +104,44 @@ class _HomeUIState extends State<HomeUI> {
                         Row(
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(15, 8, 8, 8),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
+                              padding: const EdgeInsets.fromLTRB(
+                                  15.0, 8.0, 8.0, 8.0),
+                              child: InkWell(
+                                onTap: () {
+                                  isSelected = !isSelected;
+                                  setState(() {});
+                                },
+                                child: isSelected
+                                    ? Icon(
+                                        Icons.event_seat,
+                                        size: 75,
+                                        color: Colors.white54,
+                                      )
+                                    : Icon(
+                                        Icons.event_seat,
+                                        size: 75,
+                                        color: Colors.white,
+                                      ),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
+                              child: InkWell(
+                                onTap: () {
+                                  isSelected1 = !isSelected1;
+                                  setState(() {});
+                                },
+                                child: isSelected1
+                                    ? Icon(
+                                        Icons.event_seat,
+                                        size: 75,
+                                        color: Colors.white54,
+                                      )
+                                    : Icon(
+                                        Icons.event_seat,
+                                        size: 75,
+                                        color: Colors.white,
+                                      ),
                               ),
                             ),
                             Padding(
@@ -189,10 +218,22 @@ class _HomeUIState extends State<HomeUI> {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
+                              child: InkWell(
+                                onTap: () {
+                                  isSelected2 = !isSelected2;
+                                  setState(() {});
+                                },
+                                child: isSelected2
+                                    ? Icon(
+                                        Icons.event_seat,
+                                        size: 75,
+                                        color: Colors.white54,
+                                      )
+                                    : Icon(
+                                        Icons.event_seat,
+                                        size: 75,
+                                        color: Colors.white,
+                                      ),
                               ),
                             ),
                             Padding(
