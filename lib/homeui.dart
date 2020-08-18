@@ -8,6 +8,7 @@ class HomeUI extends StatefulWidget {
 
 class _HomeUIState extends State<HomeUI> {
   @override
+  String meeting = "No ongoing meetings!";
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -32,6 +33,50 @@ class _HomeUIState extends State<HomeUI> {
                         fontFamily: 'Poppins',
                         color: Colors.white,
                         fontSize: 15),
+                  ),
+                ),
+                Card(
+                  color: Colors.grey[900],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(25.0),
+                      bottom: Radius.circular(25.0),
+                    ),
+                  ),
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
+                        child: SizedBox(
+                          width: double.infinity,
+                          height: 100,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Meeting Status',
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 24.0,
+                                    color: Colors.white),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                child: Text(
+                                  meeting,
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 15.0,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
@@ -201,21 +246,26 @@ class _HomeUIState extends State<HomeUI> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: FlatButton(
-                    color: Colors.white,
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
+                  padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: RaisedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => MyApp()),
+                            );
+                          },
+                          child: Text(
+                            'Meeting room',
+                            style: TextStyle(fontFamily: 'Poppins'),
+                          ),
+                          color: Colors.white,
+                          textColor: Colors.black,
+                        ),
                       ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MyApp()),
-                      );
-                    },
+                    ],
                   ),
                 ),
               ],

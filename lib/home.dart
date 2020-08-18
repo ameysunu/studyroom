@@ -96,20 +96,22 @@ class _HomeState extends State<Home> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: FlatButton(
-                    color: Colors.white,
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
+                  child: Expanded(
+                    child: RaisedButton(
+                      color: Colors.white,
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeUI()),
+                        );
+                      },
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomeUI()),
-                      );
-                    },
                   ),
                 ),
                 InkWell(
