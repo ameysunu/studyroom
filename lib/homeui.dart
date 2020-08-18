@@ -8,7 +8,7 @@ class HomeUI extends StatefulWidget {
 
 class _HomeUIState extends State<HomeUI> {
   @override
-  String meeting = "No ongoing meetings";
+  String meeting = "Meeting in-session.";
   bool presentSelected = false;
   bool isSelected = false;
   bool isSelected1 = false;
@@ -159,6 +159,42 @@ class _HomeUIState extends State<HomeUI> {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 75,
+                                width: 75,
+                                child: Image.asset("images/genz.jpg"),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.event_seat,
+                                color: Colors.white,
+                                size: 75,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15, 8, 8, 8),
+                              child: Container(
+                                height: 75,
+                                width: 75,
+                                child: Image.asset("images/gen1.jpg"),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.event_seat,
+                                color: Colors.white,
+                                size: 75,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
                                 color: Colors.white,
@@ -187,46 +223,10 @@ class _HomeUIState extends State<HomeUI> {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(15, 8, 8, 8),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
+                              child: Container(
+                                height: 75,
+                                width: 75,
+                                child: Image.asset("images/gen2.jpg"),
                               ),
                             ),
                             Padding(
@@ -287,10 +287,10 @@ class _HomeUIState extends State<HomeUI> {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.event_seat,
-                                color: Colors.white,
-                                size: 75,
+                              child: Container(
+                                height: 75,
+                                width: 75,
+                                child: Image.asset("images/gen3.jpg"),
                               ),
                             ),
                           ],
