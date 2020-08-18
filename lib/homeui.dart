@@ -8,7 +8,8 @@ class HomeUI extends StatefulWidget {
 
 class _HomeUIState extends State<HomeUI> {
   @override
-  String meeting = "No ongoing meetings!";
+  String meeting = "No ongoing meetings";
+  bool presentSelected = false;
   bool isSelected = false;
   bool isSelected1 = false;
   bool isSelected2 = false;
@@ -60,7 +61,7 @@ class _HomeUIState extends State<HomeUI> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                'Meeting Status',
+                                'Meetings',
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
                                     fontSize: 24.0,
@@ -96,10 +97,22 @@ class _HomeUIState extends State<HomeUI> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        Icon(
-                          Icons.personal_video,
-                          size: 80,
-                          color: Colors.white,
+                        InkWell(
+                          onTap: () {
+                            presentSelected = !presentSelected;
+                            setState(() {});
+                          },
+                          child: presentSelected
+                              ? Icon(
+                                  Icons.laptop_mac,
+                                  size: 75,
+                                  color: Colors.white54,
+                                )
+                              : Icon(
+                                  Icons.laptop_mac,
+                                  size: 75,
+                                  color: Colors.white,
+                                ),
                         ),
                         Row(
                           children: <Widget>[
