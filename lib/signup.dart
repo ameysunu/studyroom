@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -155,12 +156,23 @@ class _SignUpState extends State<SignUp> {
                   padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
                   child: Align(
                     alignment: Alignment.bottomCenter,
-                    child: Text(
-                      "Unable to create an account? Get in touch with us.",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 13,
-                          fontFamily: 'Poppins'),
+                    child: InkWell(
+                      child: Text(
+                        "Unable to create an account? Get in touch with us.",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontFamily: 'Poppins'),
+                      ),
+                      onTap: () async {
+                        const url =
+                            'https://github.com/ameysunu/studyroom/issues';
+                        if (await canLaunch(url)) {
+                          await launch(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
                     ),
                   ),
                 ),
