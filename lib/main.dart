@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'introduction.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Home(),
+    home: Introduction(),
     debugShowCheckedModeBanner: false,
   ));
 }
