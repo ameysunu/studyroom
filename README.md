@@ -2,7 +2,6 @@
 
 A meeting app using Agora SDK for live video call, enhancing better usability and ease of use for students.
 <br>
-<br>
 
 [![Codemagic build status](https://api.codemagic.io/apps/5f3d9d7697f3953237203126/5f3d9d7697f3953237203125/status_badge.svg)](https://codemagic.io/apps/5f3d9d7697f3953237203126/5f3d9d7697f3953237203125/latest_build)
 
