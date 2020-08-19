@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
-import 'agora/main.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'homeui.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -9,6 +10,71 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GoogleSignIn googleSignIn = GoogleSignIn();
+
+  Future<String> signInWithGoogle() async {
+    final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+    final GoogleSignInAuthentication googleSignInAuthentication =
+        await googleSignInAccount.authentication;
+
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+      accessToken: googleSignInAuthentication.accessToken,
+      idToken: googleSignInAuthentication.idToken,
+    );
+
+    final AuthResult authResult = await _auth.signInWithCredential(credential);
+    final FirebaseUser user = authResult.user;
+
+    assert(!user.isAnonymous);
+    assert(await user.getIdToken() != null);
+
+    final FirebaseUser currentUser = await _auth.currentUser();
+    assert(user.uid == currentUser.uid);
+
+    return 'signInWithGoogle succeeded: $user';
+  }
+
+  Widget _signIn() {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: RaisedButton(
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+              child: Container(
+                  height: 20,
+                  width: 20,
+                  child: Image.asset('images/google.png')),
+            ),
+            Text(
+              "Sign in with Google",
+              style: TextStyle(color: Colors.black, fontFamily: 'Poppins'),
+            ),
+          ],
+        ),
+        onPressed: () {
+          signInWithGoogle().whenComplete(() {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) {
+                  return HomeUI();
+                },
+              ),
+            );
+          });
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => HomeUI()),
+          // );
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,103 +101,43 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'Poppins',
-                      fontSize: 15,
+                      fontSize: 16,
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Container(
-                    height: 300,
-                    width: 300,
+                    height: 400,
+                    width: 400,
                     child: Image.asset('images/main.png'),
                   ),
                 ),
+                _signIn(),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: TextFormField(
-                    style:
-                        TextStyle(color: Colors.white, fontFamily: 'Poppins'),
-                    decoration: const InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                          width: 2.0,
-                        ),
-                      ),
-                      icon: Icon(
-                        Icons.person,
-                        color: Colors.white,
-                      ),
-                      hintText: 'Email',
-                      labelText: 'Email',
-                      labelStyle:
-                          TextStyle(color: Colors.white, fontFamily: 'Poppins'),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20.0, 0, 20, 0),
-                  child: TextFormField(
-                    obscureText: true,
-                    style:
-                        TextStyle(color: Colors.white, fontFamily: 'Poppins'),
-                    decoration: const InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                          width: 2.0,
-                        ),
-                      ),
-                      icon: Icon(
-                        Icons.lock,
-                        color: Colors.white,
-                      ),
-                      hintText: 'Password',
-                      labelText: 'Password',
-                      labelStyle:
-                          TextStyle(color: Colors.white, fontFamily: 'Poppins'),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Expanded(
-                    child: RaisedButton(
-                      color: Colors.white,
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  child: InkWell(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                       child: Text(
-                        "Login",
+                        "Have trouble logging in? Get in touch with us.",
                         style: TextStyle(
+                          color: Colors.white,
                           fontFamily: 'Poppins',
+                          fontSize: 15,
                         ),
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeUI()),
-                        );
-                      },
                     ),
+                    onTap: () async {
+                      const url =
+                          'https://github.com/ameysunu/studyroom/issues';
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
                   ),
-                ),
-                InkWell(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                    child: Text(
-                      "Don't have an account? Register here!",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Poppins',
-                        fontSize: 15,
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SignUp()),
-                    );
-                  },
                 ),
               ],
             ),

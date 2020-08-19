@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "279824364329",
+    "firebase_url": "https://studyroom-b6626.firebaseio.com",
+    "project_id": "studyroom-b6626",
+    "storage_bucket": "studyroom-b6626.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279824364329:android:a3be75910c637cc3f4bd38",
+        "android_client_info": {
+          "package_name": "com.example.agorarte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279824364329-iah87icu62g2jir09qlc8lfhqtuh6uha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYSk04dgVLt_d5ukPKeH1TI-yQoyDYpN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279824364329-iah87icu62g2jir09qlc8lfhqtuh6uha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279824364329:android:df5011ca3dc96f79f4bd38",
+        "android_client_info": {
+          "package_name": "study.room"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279824364329-iah87icu62g2jir09qlc8lfhqtuh6uha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYSk04dgVLt_d5ukPKeH1TI-yQoyDYpN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279824364329-iah87icu62g2jir09qlc8lfhqtuh6uha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
