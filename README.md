@@ -37,3 +37,6 @@ flutter clean
 pod install
 ```
 If no pods are found, continue to run the app on XCode.
+
+## Screenshots
+<img src= "images/screenshots/one.jpg" width="360" height="720" >   <img src= "images/screenshots/two.jpg" width="360" height="720" >  <img src= "images/screenshots/three.jpg" width="360" height="720" > 
