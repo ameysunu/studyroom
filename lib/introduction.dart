@@ -67,15 +67,15 @@ class _IntroductionPageState extends State<IntroductionPage> {
           body:
               "With Agora's secure camera SDK, you are safe and in right hands.",
           image: _buildImage('fourth'),
-          footer: RaisedButton(
-            onPressed: () {
-              introKey.currentState?.animateScroll(0);
-            },
-            color: Colors.lightBlue,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-            ),
-          ),
+          // footer: RaisedButton(
+          //   onPressed: () {
+          //     introKey.currentState?.animateScroll(0);
+          //   },
+          //   color: Colors.lightBlue,
+          //   shape: RoundedRectangleBorder(
+          //     borderRadius: BorderRadius.circular(8.0),
+          //   ),
+          // ),
           decoration: pageDecoration,
         ),
         PageViewModel(
@@ -91,7 +91,6 @@ class _IntroductionPageState extends State<IntroductionPage> {
         ),
       ],
       onDone: () => _onIntroEnd(context),
-      //onSkip: () => _onIntroEnd(context), // You can override onSkip callback
       showSkipButton: true,
       skipFlex: 0,
       nextFlex: 0,
