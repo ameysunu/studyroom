@@ -46,35 +46,31 @@ class _IntroductionPageState extends State<IntroductionPage> {
         PageViewModel(
           title: "Welcome to StudyRoom.",
           body: "Easy, seamless classroom experience",
-          image: _buildImage('gen1'),
+          image: _buildImage('intro'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Join meetings easily",
           body: "Just select your seat and get into the meeting.",
-          image: _buildImage('gen1'),
+          image: _buildImage('second'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Present as you go",
           body:
               "Present meetings, and choose your on meeting ID and pass it to only those, who you want to join.",
-          image: _buildImage('genz'),
+          image: _buildImage('third'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Security Redefined",
           body:
               "With Agora's secure camera SDK, you are safe and in right hands.",
-          image: _buildImage('gen2'),
+          image: _buildImage('fourth'),
           footer: RaisedButton(
             onPressed: () {
               introKey.currentState?.animateScroll(0);
             },
-            child: const Text(
-              'FooButton',
-              style: TextStyle(color: Colors.white),
-            ),
             color: Colors.lightBlue,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
@@ -90,7 +86,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
               Text("Welcome to StudyRoom.", style: bodyStyle),
             ],
           ),
-          image: _buildImage('gen3'),
+          image: _buildImage('final'),
           decoration: pageDecoration,
         ),
       ],
@@ -124,6 +120,6 @@ class _IntroductionPageState extends State<IntroductionPage> {
 
 Widget _buildImage(String assetName) {
   return Align(
-      child: Image.asset('images/$assetName.jpg', width: 350.0),
+      child: Image.asset('images/introduction/$assetName.png', width: 350.0),
       alignment: Alignment.bottomCenter);
 }

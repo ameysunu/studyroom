@@ -55,6 +55,11 @@ flutter:
     - images/gen1.jpg
     - images/gen2.jpg
     - images/gen3.jpg
+    - images/introduction/intro.png
+    - images/introduction/second.png
+    - images/introduction/third.png
+    - images/introduction/fourth.png
+    - images/introduction/final.png
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
