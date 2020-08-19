@@ -35,6 +35,12 @@ class _HomeState extends State<Home> {
     return 'signInWithGoogle succeeded: $user';
   }
 
+  void signOutGoogle() async {
+    await googleSignIn.signOut();
+
+    print("User Sign Out");
+  }
+
   Widget _signIn() {
     return Padding(
       padding: const EdgeInsets.all(20.0),

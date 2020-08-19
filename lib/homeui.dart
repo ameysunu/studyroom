@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'agora/main.dart';
+import 'home.dart';
 
 class HomeUI extends StatefulWidget {
   @override
@@ -24,6 +25,19 @@ class _HomeUIState extends State<HomeUI> {
             "Welcome",
             style: TextStyle(color: Colors.white, fontFamily: 'Poppins'),
           ),
+          actions: [
+            IconButton(
+                icon: Icon(
+                  Icons.power_settings_new,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Home()),
+                  );
+                }),
+          ],
         ),
         backgroundColor: Colors.black,
         body: SingleChildScrollView(
