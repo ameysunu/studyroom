@@ -27,12 +27,17 @@ class _IntroductionPageState extends State<IntroductionPage> {
 
   @override
   Widget build(BuildContext context) {
-    const bodyStyle = TextStyle(fontSize: 19.0);
+    const bodyStyle =
+        TextStyle(fontSize: 19.0, fontFamily: 'Poppins', color: Colors.white);
     const pageDecoration = const PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
+      titleTextStyle: TextStyle(
+          fontSize: 28.0,
+          fontWeight: FontWeight.w700,
+          fontFamily: 'Poppins',
+          color: Colors.white),
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-      pageColor: Colors.white,
+      pageColor: Colors.black,
       imagePadding: EdgeInsets.zero,
     );
     return IntroductionScreen(
@@ -45,22 +50,22 @@ class _IntroductionPageState extends State<IntroductionPage> {
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Learn as you go",
-          body:
-              "Download the Stockpile app and master the market with our mini-lesson.",
+          title: "Join meetings easily",
+          body: "Just select your seat and get into the meeting.",
           image: _buildImage('gen1'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Kids and teens",
+          title: "Present as you go",
           body:
-              "Kids and teens can track their stocks 24/7 and place trades that you approve.",
+              "Present meetings, and choose your on meeting ID and pass it to only those, who you want to join.",
           image: _buildImage('genz'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Another title page",
-          body: "Another beautiful body text for this example onboarding",
+          title: "Security Redefined",
+          body:
+              "With Agora's secure camera SDK, you are safe and in right hands.",
           image: _buildImage('gen2'),
           footer: RaisedButton(
             onPressed: () {
@@ -78,13 +83,11 @@ class _IntroductionPageState extends State<IntroductionPage> {
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Title of last page",
+          title: "You are all ready!",
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text("Click on ", style: bodyStyle),
-              Icon(Icons.edit),
-              Text(" to edit a post", style: bodyStyle),
+              Text("Welcome to StudyRoom.", style: bodyStyle),
             ],
           ),
           image: _buildImage('gen3'),
@@ -96,9 +99,17 @@ class _IntroductionPageState extends State<IntroductionPage> {
       showSkipButton: true,
       skipFlex: 0,
       nextFlex: 0,
-      skip: const Text('Skip'),
-      next: const Icon(Icons.arrow_forward),
-      done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
+      skip: const Text('Skip',
+          style: TextStyle(fontFamily: 'Poppins', color: Colors.white)),
+      next: const Icon(
+        Icons.arrow_forward,
+        color: Colors.white,
+      ),
+      done: const Text('Done',
+          style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Poppins',
+              color: Colors.white)),
       dotsDecorator: const DotsDecorator(
         size: Size(10.0, 10.0),
         color: Color(0xFFBDBDBD),
