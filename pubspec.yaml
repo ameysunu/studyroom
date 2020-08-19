@@ -26,6 +26,7 @@ dependencies:
   agora_rtc_engine: ^1.0.5
   permission_handler: ^3.0.0
   url_launcher: ^5.5.0
+  introduction_screen: ^1.0.7
 
 
   # The following adds the Cupertino Icons font to your application.
