@@ -169,7 +169,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -189,7 +189,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -197,7 +197,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -205,7 +205,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -217,7 +217,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.fromLTRB(15, 8, 8, 8),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -253,7 +253,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -265,7 +265,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.fromLTRB(15, 8, 8, 8),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -273,7 +273,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
@@ -281,7 +281,7 @@ class _HomeUIState extends State<HomeUI> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.event_seat,
-                                color: Colors.white,
+                                color: Colors.white54,
                                 size: 75,
                               ),
                             ),
