@@ -57,3 +57,6 @@ flutter clean
 pod install
 ```
 If no pods are found, continue to run the app on XCode.
+
+## What's next for StudyRoom
+We would like to incorporate features like setting deadlines for an assignments, a scheduler for planning lecture timings, a tracker for recording scores assigned to each student and whiteboarding facility to a teacher.
