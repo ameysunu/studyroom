@@ -1,9 +1,26 @@
-# Study Room
+# StudyRoom
 
-A meeting app using Agora SDK for live video call, enhancing better usability and ease of use for students.
+A virtual classroom app, built using Agora SDK for live video call, enabling better usability and an immersive classroom experience for the teachers and the students.
 <br>
 
 [![Codemagic build status](https://api.codemagic.io/apps/5f3d9d7697f3953237203126/5f3d9d7697f3953237203125/status_badge.svg)](https://codemagic.io/apps/5f3d9d7697f3953237203126/5f3d9d7697f3953237203125/latest_build)
+
+## Inspiration 
+In these Covid-19 times, most of the classes happen online, and even though there are apps like Zoom, Google Meet, etc. students as well as the teachers dont get the feel of a classroom, which can hamper the learning experience in some way, as students might not feel motivated enough to attend an online class. The StudyRoom app provides an infrastructure for students to experience a totally virtually classroom, where they can take a seat on the virtual benches with their classmates and attend lectures, just like a real classroom.
+
+## What it does
+The StudyRoom app allows the teacher to create a virtual room for her class, and share the classroom ID to her students. Students can signup to the app via Google and enter the virtual class. The virtual class will have numerous benches wherein a student can take a seat with his fellow classmates. The teacher can deliver a live video lecture and also choose to present her screen to the class.
+
+## Features
+###### 1 . Home Page
+<img src= "images/screenshots/one.jpg" width="360" height="720" > 
+
+###### 2 . Signup /Login
+<img src= "images/screenshots/two.jpg" width="360" height="720" > 
+ 
+###### 3 . Enter a Study Room
+<img src= "images/screenshots/three.jpg" width="360" height="720" > 
+
 
 ## Getting Started
 
@@ -40,6 +57,3 @@ flutter clean
 pod install
 ```
 If no pods are found, continue to run the app on XCode.
-
-## Screenshots
-<img src= "images/screenshots/one.jpg" width="360" height="720" >   <img src= "images/screenshots/two.jpg" width="360" height="720" >  <img src= "images/screenshots/three.jpg" width="360" height="720" > 
