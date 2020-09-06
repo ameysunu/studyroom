@@ -6,13 +6,10 @@ import 'package:flutter/material.dart';
 import '../utils/settings.dart';
 
 class CallPage extends StatefulWidget {
-  /// non-modifiable channel name of the page
   final String channelName;
 
-  /// non-modifiable client role of the page
   final ClientRole role;
 
-  /// Creates a call page with given channel name.
   const CallPage({Key key, this.channelName, this.role}) : super(key: key);
 
   @override
@@ -135,7 +132,6 @@ class _CallPageState extends State<CallPage> {
     return list;
   }
 
-  /// Video view wrapper
   Widget _videoView(view) {
     return Expanded(child: Container(child: view));
   }
